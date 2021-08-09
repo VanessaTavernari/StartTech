@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+
+    
+}
+
+.flex div{
+    border: 1px solid black;
+    margin: 15%;
+    flex-basis: 100%;
+}
+
+.flex img{
+    max-width: 30px;
+}
+
