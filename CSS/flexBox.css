@@ -6,7 +6,7 @@
 
 .flex div{
     border: 1px solid black;
-    margin: 15%;
+    margin: 14%;
     flex-basis: 100%;
 }
 
