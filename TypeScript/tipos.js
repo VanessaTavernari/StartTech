@@ -52,10 +52,28 @@ function erro(mensagem) {
 function falha() {
     return erro("Algo falhou");
 }
-function somar(numero1, numero2) {
-    return numero1 + numero2;
+// Union Types - mais de um tipo 
+var nota = 5;
+function exibirNota(nota) {
+    console.log("A nota \u00E9 " + nota);
 }
-var numero3 = 20;
-var numero4 = 150;
-var total = somar(numero3, numero4);
-console.log(total);
+exibirNota("10");
+exibirNota(8);
+
+// Alias Type - cria um type
+var colaboradores = [{
+        nome: "Ana",
+        sobrenome: "Alves",
+        dataNascimento: new Date()
+    }, {
+        nome: "Bia",
+        sobrenome: "Dias",
+        dataNascimento: new Date()
+    }];
+function tratarFuncionarios(colaboradores) {
+    for (var _i = 0, colaboradores_1 = colaboradores; _i < colaboradores_1.length; _i++) {
+        var colaborador = colaboradores_1[_i];
+        console.log("Nome do colaborador: ", colaborador.nome);
+    }
+}
+tratarFuncionarios(colaboradores);

@@ -64,12 +64,35 @@ function falha() {
 }
 
 
-function somar(numero1: number, numero2: number){
-    return numero1 + numero2;
+// Union Types - mais de um tipo 
+const nota: string | number = 5;
+
+function exibirNota(nota: number | string) {
+    console.log(`A nota é ${nota}`);
 }
 
-const numero3 = 20;
-const numero4 = 150;
+exibirNota("10");
+exibirNota(8);
 
-const total = somar(numero3, numero4);
-console.log(total);
+// Alias - cria um type
+type Funcionario = {
+    nome: string;
+    sobrenome: string;
+    dataNascimento: Date;
+}
+const colaboradores: Funcionario[] = [{
+    nome: "Ana",
+    sobrenome: "Alves",
+    dataNascimento: new Date()
+}, {
+    nome: "Bia",
+    sobrenome: "Dias",
+    dataNascimento: new Date()
+}];
+
+function tratarFuncionarios(colaboradores: Funcionario[]) {
+    for(let colaborador of colaboradores) {
+        console.log("Nome do colaborador: ", colaborador.nome);
+    }
+}
+tratarFuncionarios(colaboradores);
