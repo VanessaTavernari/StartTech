@@ -6,7 +6,15 @@ function App(props) {
   const [usuario, setUsuario] = useState("");
   
   function handlePesquisa() {
-    axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => console.log(response.data));
+    axios.get(`https://api.github.com/users/${usuario}/repos`).then(response => {
+      const repositories = response.data;
+      const repositoriesName = [];
+      
+      repositories.map((repository) => {
+        repositoriesName.push(repository.name);
+      });
+      localStorage.setItem('repositoriesName', JSON.stringify(repositoriesName));
+    });
   }
 
   return (
