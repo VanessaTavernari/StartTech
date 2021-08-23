@@ -1,0 +1,22 @@
+{
+  "name": "node-ts",
+  "version": "1.0.0",
+  "description": "Projeto de teste do TypeScript.",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "typescript",
+    "usuario",
+    "criacao"
+  ],
+  "author": "Vanessa T Tavernari",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.7.1",
+    "fs": "0.0.1-security",
+    "query-string": "^7.0.1",
+    "typescript": "^4.3.5"
+  }
+}
